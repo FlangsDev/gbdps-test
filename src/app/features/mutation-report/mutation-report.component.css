@@ -156,11 +156,11 @@ th {
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
-th.sub-th {
+th.sub-th { text-align: center;
   background-color: #f1f5f9;
   color: #475569;
 }
-td {
+td { text-align: center;
   padding: 12px 10px;
   border: 1px solid #e2e8f0;
   color: var(--text-main);

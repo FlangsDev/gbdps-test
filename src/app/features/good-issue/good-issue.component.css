@@ -59,12 +59,12 @@
   color: var(--text-main);
 }
 
-.history-table th {
+.history-table th { text-align: center;
   font-size: 0.8rem;
   padding: 12px;
 }
 
-.history-table td {
+.history-table td { text-align: center;
   padding: 12px;
   font-size: 0.85rem;
 }
@@ -218,7 +218,7 @@ table {
 }
 
 th,
-td {
+td { text-align: center;
   border: 1px solid #e2e8f0;
   padding: 6px 8px;
 }
@@ -233,7 +233,7 @@ th {
   vertical-align: middle;
 }
 
-.sub-th {
+.sub-th { text-align: center;
   background-color: #f1f5f9;
   font-size: 0.7rem;
 }
@@ -620,7 +620,7 @@ th {
     background-color: transparent !important;
   }
 
-  .print-table th {
+  .print-table th { text-align: center;
     font-weight: bold;
     background-color: #f1f5f9 !important;
   }

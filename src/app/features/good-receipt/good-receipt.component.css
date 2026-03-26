@@ -15,15 +15,15 @@
 }
 
 .form-header h2 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--text-main);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .form-header p {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .header-flex {
@@ -33,12 +33,13 @@
 }
 
 .btn-primary {
-  padding: 10px 20px;
+  padding: 8px 18px;
   background: var(--primary-color);
   border: none;
   color: white;
   border-radius: 8px;
   font-weight: 600;
+  font-size: 0.85rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -61,14 +62,22 @@
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   background-color: white;
 }
 
+.col-search input {
+  padding: 2px 6px;
+  font-size: inherit;
+  border-radius: 4px;
+  min-width: 40px;
+  width: 100%;
+}
+
 th,
-td {
+td { text-align: center;
   border: 1px solid #e2e8f0;
-  padding: 12px;
+  padding: 4px 6px;
 }
 
 th {
@@ -76,7 +85,8 @@ th {
   color: #475569;
   font-weight: 600;
   text-transform: capitalize;
-  text-align: left;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .text-center {
@@ -453,7 +463,7 @@ textarea:focus {
     background-color: transparent !important;
   }
 
-  .print-table th {
+  .print-table th { text-align: center;
     font-weight: bold;
     background-color: #f1f5f9 !important;
   }

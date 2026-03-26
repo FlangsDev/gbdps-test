@@ -1,43 +1,315 @@
 /* Reusing logic from inward component styling */
-.report-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
-.filters { background: #fff; border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: 0.9rem; }
-.filters i:first-child { color: var(--text-muted); }
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
 
-.actions { display: flex; gap: 16px; }
-.search-box { position: relative; width: 300px; }
-.search-box i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
-.search-box input { width: 100%; padding: 10px 10px 10px 36px; border: 1px solid var(--border-color); border-radius: 8px; background-color: #fff; font-size: 0.9rem; }
-.dropdown-container { position: relative; }
-.btn-download { padding: 10px 16px; border: 1px solid var(--border-color); background: #fff; border-radius: 8px; display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 500; color: var(--text-main); font-size: 0.9rem; transition: all 0.2s; }
-.btn-download:hover { background: #f8fafc; border-color: #cbd5e1; }
-.dropdown-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: white; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); padding: 8px; width: max-content; min-width: 120px; max-width: 200px; border: 1px solid var(--border-color); z-index: 200; animation: slideDown 0.2s ease-out; }
-.dropdown-menu ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
-.dropdown-menu li { padding: 10px 14px; display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: 0.85rem; font-weight: 600; border-radius: 8px; transition: all 0.2s; color: var(--text-main); }
+.filters {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.filters i:first-child {
+    color: var(--text-muted);
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+}
+
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 10px 10px 36px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 0.9rem;
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+.btn-download {
+    padding: 10px 16px;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.btn-download:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 4px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    width: max-content;
+    min-width: 120px;
+    max-width: 200px;
+    border: 1px solid var(--border-color);
+    z-index: 200;
+    animation: slideDown 0.2s ease-out;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dropdown-menu li {
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s;
+    color: var(--text-main);
+}
+
 /* Document Specific Colors */
-.dropdown-menu li.opt-pdf:hover { background-color: #fee2e2; color: #dc2626; }
-.dropdown-menu li.opt-pdf i { color: #dc2626; font-size: 1.1rem; }
-.dropdown-menu li.opt-excel:hover { background-color: #dcfce7; color: #16a34a; }
-.dropdown-menu li.opt-excel i { color: #16a34a; font-size: 1.1rem; }
-@keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-.table-container { background: #fff; border-radius: 12px; border: 1px solid var(--border-color); overflow-x: auto; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-table { width: 100%; border-collapse: collapse; font-size: 0.65rem; white-space: normal; table-layout: auto; }
-th { background-color: #f8fafc; padding: 12px 10px; text-align: left; font-weight: 600; color: var(--text-muted); border-bottom: 1px solid var(--border-color); font-size: 0.65rem; }
-td { padding: 16px 10px; border-bottom: 1px solid #f1f5f9; color: var(--text-main); }
-.badge { padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
-.badge-red { background-color: #fee2e2; color: #dc2626; }
-.badge-gray { background-color: #f3f4f6; color: #4b5563; }
-.status-tag { display: inline-flex; align-items: center; justify-content: center; text-align: center; gap: 4px; padding: 6px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 600; border: 1px solid transparent; width: max-content; min-width: 85px; white-space: nowrap; }
-.status-tag.not-ready { background-color: #fef08a; color: #a16207; border-color: #fde047; }
-.alert-icon { color: #ca8a04; }
-.status-tag.badge-pdf { background-color: #fee2e2; color: #dc2626; border-color: #fca5a5; }
-.text-muted { color: #94a3b8; }
-.inline-drop { display: inline-block; margin: 0 4px; }
-.page-menu { top: 100%; bottom: auto; margin-top: 4px; width: 100% !important; min-width: 100% !important; max-width: 100% !important; left: 0; right: auto; padding: 4px 0; border-radius: 8px !important; }
-.page-menu li { padding: 8px 0 !important; justify-content: center !important; font-size: 0.85rem !important; border-radius: 4px !important; gap: 0 !important; }
-.custom-select-trigger { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid #0ea5e9; border-radius: 6px; font-size: 0.85rem; font-weight: 600; background-color: #fff; cursor: pointer; transition: all 0.2s; color: #0ea5e9; width: auto; min-width: unset; }
-.custom-select-trigger:hover { background-color: #f0f9ff; border-color: var(--primary-color); }
-.custom-select-trigger i { color: #0ea5e9; font-size: 0.75rem; }
-.pagination { margin-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
-.page-controls { display: flex; gap: 8px; }
-.p-btn { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); background: #fff; border-radius: 6px; cursor: pointer; }
-.p-btn.active { background-color: var(--primary-color); color: #fff; border-color: var(--primary-color); }
+.dropdown-menu li.opt-pdf:hover {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.dropdown-menu li.opt-pdf i {
+    color: #dc2626;
+    font-size: 1.1rem;
+}
+
+.dropdown-menu li.opt-excel:hover {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.dropdown-menu li.opt-excel i {
+    color: #16a34a;
+    font-size: 1.1rem;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table-container {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.65rem;
+    white-space: normal;
+    table-layout: auto;
+}
+
+th {
+    background-color: #f8fafc;
+    padding: 12px 10px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.65rem;
+}
+
+td { text-align: center;
+    padding: 16px 10px;
+    border-bottom: 1px solid #f1f5f9;
+    color: var(--text-main);
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-red {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.badge-gray {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.status-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    width: max-content;
+    min-width: 85px;
+    white-space: nowrap;
+}
+
+.status-tag.not-ready {
+    background-color: #fef08a;
+    color: #a16207;
+    border-color: #fde047;
+}
+
+.alert-icon {
+    color: #ca8a04;
+}
+
+.status-tag.badge-pdf {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border-color: #fca5a5;
+}
+
+.text-muted {
+    color: #94a3b8;
+}
+
+.inline-drop {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.page-menu {
+    top: 100%;
+    bottom: auto;
+    margin-top: 4px;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    left: 0;
+    right: auto;
+    padding: 4px 0;
+    border-radius: 8px !important;
+}
+
+.page-menu li {
+    padding: 8px 0 !important;
+    justify-content: center !important;
+    font-size: 0.85rem !important;
+    border-radius: 4px !important;
+    gap: 0 !important;
+}
+
+.custom-select-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border: 1px solid #0ea5e9;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #0ea5e9;
+    width: auto;
+    min-width: unset;
+}
+
+.custom-select-trigger:hover {
+    background-color: #f0f9ff;
+    border-color: var(--primary-color);
+}
+
+.custom-select-trigger i {
+    color: #0ea5e9;
+    font-size: 0.75rem;
+}
+
+.pagination {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.page-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.p-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.p-btn.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}

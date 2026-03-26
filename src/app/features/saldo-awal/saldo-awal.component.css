@@ -65,26 +65,26 @@
   border-radius: 12px;
   border: 1px solid var(--border-color);
   overflow-x: auto;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.75rem; 
+  font-size: 0.75rem;
   white-space: nowrap;
 }
 
 th {
   background-color: #f8fafc;
   padding: 10px 12px;
-  text-align: left;
+  text-align: center;
   font-weight: 600;
   color: var(--text-muted);
   border-bottom: 1px solid var(--border-color);
 }
 
-td {
+td { text-align: center;
   padding: 12px 12px;
   border-bottom: 1px solid #f1f5f9;
   color: var(--text-main);
@@ -101,11 +101,25 @@ tr:hover {
   font-weight: 600;
 }
 
-.badge-blue { background-color: #e0f2fe; color: #0369a1; }
-.badge-red { background-color: #fee2e2; color: #dc2626; }
+.badge-blue {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
 
-.text-red { color: #dc2626; font-weight: 600;}
-.text-green { color: #16a34a; font-weight: 600;}
+.badge-red {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.text-red {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.text-green {
+  color: #16a34a;
+  font-weight: 600;
+}
 
 /* Form Card */
 .form-card {
@@ -113,7 +127,7 @@ tr:hover {
   border-radius: 12px;
   padding: 16px 20px;
   border: 1px solid var(--border-color);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   max-width: 100%;
   margin: 0;
   animation: fadeIn 0.3s ease-in-out;
@@ -122,11 +136,13 @@ tr:hover {
 .form-header {
   margin-bottom: 14px;
 }
+
 .form-header h2 {
   font-size: 1.25rem;
   margin-bottom: 6px;
   color: var(--text-main);
 }
+
 .form-header p {
   color: var(--text-muted);
   font-size: 0.95rem;
@@ -147,7 +163,10 @@ tr:hover {
   padding: 4px;
   transition: color 0.2s;
 }
-.btn-close:hover { color: #dc2626; }
+
+.btn-close:hover {
+  color: #dc2626;
+}
 
 .upload-notice {
   background-color: #eff6ff;
@@ -167,8 +186,13 @@ tr:hover {
   color: #3b82f6;
 }
 
-.mt-24 { margin-top: 14px; }
-.mt-32 { margin-top: 20px; }
+.mt-24 {
+  margin-top: 14px;
+}
+
+.mt-32 {
+  margin-top: 20px;
+}
 
 .form-group label {
   display: block;
@@ -260,8 +284,15 @@ tr:hover {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .btn-text {
@@ -274,16 +305,42 @@ tr:hover {
 .text-primary {
   color: var(--primary-color);
 }
+
 .text-primary:hover {
   color: #1e3a8a;
 }
 
 @media (max-width: 1024px) {
-  .report-header { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .actions { width: 100%; flex-wrap: wrap; }
-  .actions button { flex: 1; justify-content: center; }
-  .form-card { padding: 24px 16px; }
-  .form-actions { flex-direction: column; }
-  .form-actions button { width: 100%; justify-content: center; }
-  .dropzone { padding: 32px 16px; }
+  .report-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .actions button {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .form-card {
+    padding: 24px 16px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dropzone {
+    padding: 32px 16px;
+  }
 }

@@ -212,18 +212,19 @@ table {
 th {
   background-color: #f8fafc;
   padding: 8px 6px;
-  text-align: left;
+  text-align: center;
   font-weight: 600;
   color: var(--text-muted);
   border-bottom: 1px solid var(--border-color);
   font-size: 0.65rem;
 }
 
-td {
+td { text-align: center;
   padding: 8px 4px;
   border-bottom: 1px solid #f1f5f9;
   color: var(--text-main);
 }
+
 
 /* specifically adjust columns to prevent stretching */
 

@@ -160,7 +160,7 @@ table {
 }
 
 th,
-td {
+td { text-align: center;
   border: 1px solid #e2e8f0;
   padding: 6px 8px;
 }
@@ -175,7 +175,7 @@ th {
   vertical-align: middle;
 }
 
-.sub-th {
+.sub-th { text-align: center;
   background-color: #f1f5f9;
   font-size: 0.7rem;
 }
