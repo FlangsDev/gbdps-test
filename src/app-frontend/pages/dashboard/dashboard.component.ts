@@ -204,6 +204,7 @@ import { CommonModule } from '@angular/common';
       justify-content: center;
       gap: 12px;
       width: 100%;
+      margin: 0 auto;
     }
     
     .chart-card {
@@ -215,6 +216,7 @@ import { CommonModule } from '@angular/common';
       transition: all 0.3s ease;
       width: 100%;
       max-width: 550px;
+      margin: 0 auto;
     }
 
     .chart-card:hover {
