@@ -199,14 +199,13 @@ import { CommonModule } from '@angular/common';
     .text-orange  { color: #ea580c; }
     .text-purple  { color: #7c3aed; }
 
-    /* Premium Donut Charts */
     .charts-container {
-      display: grid;
-      grid-template-columns: 1fr;
+      display: flex;
+      justify-content: center;
       gap: 12px;
-      max-width: 600px;
+      width: 100%;
     }
-
+    
     .chart-card {
       background: #fff;
       padding: 16px;
@@ -214,6 +213,8 @@ import { CommonModule } from '@angular/common';
       border: 1px solid var(--border-color);
       box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
       transition: all 0.3s ease;
+      width: 100%;
+      max-width: 550px;
     }
 
     .chart-card:hover {
