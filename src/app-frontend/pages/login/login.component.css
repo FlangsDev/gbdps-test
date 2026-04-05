@@ -1,9 +1,9 @@
 .gmf-logo {
   display: block;
-  height: 90px;
+  height: 140px;
   width: auto;
-  margin-bottom: 24px;
-  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.4)) brightness(0) invert(1);
+  margin-bottom: 28px;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.5)) brightness(0) invert(1);
   position: relative;
   z-index: 10;
 }
