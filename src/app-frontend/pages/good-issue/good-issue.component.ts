@@ -12,8 +12,8 @@ import { Router } from '@angular/router';
 })
 export class GoodIssueComponent {
   historyList = [
-    { id: 1, date: '08-03-2026', issueNumber: 'GI-20260308-001', batchNumber: '000001', destination: 'GMF Hangar 4', partNumber: 'PN-1001A', description: 'DOCUMENT DESC/OXYGEN BOTTLE', qty: 10, unit: 'SET', registrationNumber: 'BC27-000123', registrationDate: '08-03-2026', shippedTo: 'PT. Garuda MRO', docNo: '0001/GMF/20260308', picName: 'KADEK SUDIARSA' },
-    { id: 2, date: '10-03-2026', issueNumber: 'GI-20260310-002', batchNumber: '000002', destination: 'GMF Hangar 2', partNumber: 'PN-1002B', description: 'EASTMAN TURBO OIL 2197', qty: 5, unit: 'LTR', registrationNumber: 'BC27-000124', registrationDate: '10-03-2026', shippedTo: 'PT. Lion Air Technik', docNo: '0002/GMF/20260310', picName: 'KADEK SUDIARSA' },
+    { id: 1, date: '08-03-2026', issueNumber: 'GI-20260308-001', batchNumber: '000001', destination: 'GMF Hangar 4', partNumber: 'PN-1001A', description: 'DOCUMENT DESC/OXYGEN BOTTLE', qty: 10, unit: 'SET', registrationNumber: 'BC27-000123', registrationDate: '08-03-2026', shippedTo: 'PT. Garuda MRO', docNo: '0001/GMF/20260308', picName: 'BUDI SANTOSO' },
+    { id: 2, date: '10-03-2026', issueNumber: 'GI-20260310-002', batchNumber: '000002', destination: 'GMF Hangar 2', partNumber: 'PN-1002B', description: 'EASTMAN TURBO OIL 2197', qty: 5, unit: 'LTR', registrationNumber: 'BC27-000124', registrationDate: '10-03-2026', shippedTo: 'PT. Lion Air Technik', docNo: '0002/GMF/20260310', picName: 'ANDI PRATAMA' },
   ];
 
   globalSearch = '';
