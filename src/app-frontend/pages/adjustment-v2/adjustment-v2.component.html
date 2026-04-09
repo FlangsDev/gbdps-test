@@ -22,7 +22,7 @@
     <button class="btn-primary" (click)="showFilteredData()" style="align-self: flex-end; height: 42px;"><i class="fa-solid fa-search"></i> Tampilkan Data</button>
   </div>
 
-  <div class="table-container" *ngIf="hasFilteredData">
+  <div class="table-container">
     <table>
       <thead>
         <tr>
@@ -35,7 +35,7 @@
         <tr *ngFor="let item of items">
           <td>{{item.no}}</td>
           <td>{{item.kodeBarang}}</td>
-          <td>{{item.jumlah > 0 ? '+' : ''}}{{item.jumlah}}</td>
+          <td>{{hasFilteredData ? (item.jumlah > 0 ? '+' : '') + item.jumlah : 0}}</td>
         </tr>
       </tbody>
     </table>
@@ -60,7 +60,7 @@
   <div class="upload-container mt-24">
     <div class="form-group" style="margin-bottom: 20px;">
       <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-main); margin-bottom: 8px; display: block;">Tanggal Upload <span style="color:red">*</span></label>
-      <input type="date" [(ngModel)]="uploadDate" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); font-family: inherit;">
+      <input type="date" [(ngModel)]="uploadDate" style="width: 250px; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); font-family: inherit;">
     </div>
 
     <div class="form-group">
