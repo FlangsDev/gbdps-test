@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-saldo-awal',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './saldo-awal.component.html',
   styleUrl: './saldo-awal.component.css'
 })
 export class SaldoAwalComponent {
   showUploadForm = false;
   showHistory = false;
+  uploadDate: string = '';
+  filterDate: string = '';
+  hasFilteredData = false;
 
   items = [
     { no: '1', kodeBarang: 'PN-00100', jumlah: 150 },
@@ -39,5 +43,13 @@ export class SaldoAwalComponent {
   closePanels() {
     this.showUploadForm = false;
     this.showHistory = false;
+  }
+
+  showFilteredData() {
+    if (this.filterDate) {
+      this.hasFilteredData = true;
+    } else {
+      this.hasFilteredData = false;
+    }
   }
 }

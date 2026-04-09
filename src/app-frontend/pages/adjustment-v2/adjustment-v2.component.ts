@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-adjustment-v2',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './adjustment-v2.component.html',
   styleUrl: './adjustment-v2.component.css'
 })
 export class AdjustmentV2Component {
   showUploadForm = false;
   showHistory = false;
+  uploadDate: string = '';
+  filterDate: string = '';
+  hasFilteredData = false;
 
   items = [
     { no: '1', kodeBarang: 'PN-00100', jumlah: 15 },
@@ -36,5 +40,13 @@ export class AdjustmentV2Component {
   closePanels() {
     this.showUploadForm = false;
     this.showHistory = false;
+  }
+
+  showFilteredData() {
+    if (this.filterDate) {
+      this.hasFilteredData = true;
+    } else {
+      this.hasFilteredData = false;
+    }
   }
 }

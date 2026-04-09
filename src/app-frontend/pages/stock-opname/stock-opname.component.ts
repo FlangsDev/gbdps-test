@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-stock-opname',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './stock-opname.component.html',
   styleUrl: './stock-opname.component.css'
 })
 export class StockOpnameComponent {
   showUploadForm = false;
   showHistory = false;
+  uploadDate: string = '';
+  filterDate: string = '';
+  hasFilteredData = false;
 
   items = [
     { no: '1', kodeBarang: 'PN-00100', jumlah: 150 },
@@ -39,6 +43,14 @@ export class StockOpnameComponent {
   closePanels() {
     this.showUploadForm = false;
     this.showHistory = false;
+  }
+
+  showFilteredData() {
+    if (this.filterDate) {
+      this.hasFilteredData = true;
+    } else {
+      this.hasFilteredData = false;
+    }
   }
 }
 
