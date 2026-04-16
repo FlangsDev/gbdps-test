@@ -1,6 +1,6 @@
 <div class="report-header">
   <div class="actions-left">
-    <h2 class="page-title">Data Adjustment 2.0</h2>
+    <h2 class="page-title">Data Adjustment</h2>
   </div>
   <div class="actions">
     <button class="btn-secondary" (click)="toggleHistory()">
@@ -14,12 +14,18 @@
 
 <!-- DATA TABLE VIEW -->
 <div class="content-section" *ngIf="!showUploadForm && !showHistory">
-  <div class="filter-section" style="margin-bottom: 20px; display: flex; gap: 16px; align-items: center; background: white; padding: 16px 20px; border-radius: 12px; border: 1px solid var(--border-color);">
+  <div class="filter-section"
+    style="margin-bottom: 20px; display: flex; gap: 16px; align-items: center; background: white; padding: 16px 20px; border-radius: 12px; border: 1px solid var(--border-color);">
     <div class="form-group" style="margin-bottom: 0; min-width: 250px;">
-      <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-main); margin-bottom: 8px; display: block;">Pilih Tanggal Upload</label>
-      <input type="text" placeholder="dd/mm/yyyy" onfocus="this.type='date'" onblur="if(!this.value) this.type='text'" [(ngModel)]="filterDate" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); font-family: inherit;">
+      <label
+        style="font-size: 0.85rem; font-weight: 600; color: var(--text-main); margin-bottom: 8px; display: block;">Pilih
+        Tanggal Upload</label>
+      <input type="text" placeholder="dd/mm/yyyy" onfocus="this.type='date'" onblur="if(!this.value) this.type='text'"
+        [(ngModel)]="filterDate"
+        style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); font-family: inherit;">
     </div>
-    <button class="btn-primary" (click)="showFilteredData()" style="align-self: flex-end; height: 42px;"><i class="fa-solid fa-search"></i> Tampilkan Data</button>
+    <button class="btn-primary" (click)="showFilteredData()" style="align-self: flex-end; height: 42px;"><i
+        class="fa-solid fa-search"></i> Tampilkan Data</button>
   </div>
 
   <div class="table-container">
@@ -46,27 +52,33 @@
 <div class="form-card" *ngIf="showUploadForm">
   <div class="form-header flex-between">
     <div>
-      <h2>Upload Data Adjustment 2.0</h2>
+      <h2>Upload Data Adjustment</h2>
       <p>Silakan upload file excel hasil Adjustment terbaru.</p>
     </div>
     <button class="btn-close" (click)="closePanels()"><i class="fa-solid fa-times"></i></button>
   </div>
-  
+
   <div class="upload-notice">
     <i class="fa-solid fa-circle-info"></i>
-    <span><strong>Note:</strong> File Excel harus terdiri dari 2 kolom. Kolom pertama adalah Part Number / Kode Barang, dan kolom kedua adalah Jumlah.</span>
+    <span><strong>Note:</strong> File Excel harus terdiri dari 2 kolom. Kolom pertama adalah Part Number / Kode Barang,
+      dan kolom kedua adalah Jumlah.</span>
   </div>
 
   <div class="upload-container mt-24">
     <div class="form-group" style="margin-bottom: 20px;">
-      <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-main); margin-bottom: 8px; display: block;">Tanggal Upload <span style="color:red">*</span></label>
-      <input type="date" [(ngModel)]="uploadDate" style="width: 250px; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); font-family: inherit;">
+      <label
+        style="font-size: 0.85rem; font-weight: 600; color: var(--text-main); margin-bottom: 8px; display: block;">Tanggal
+        Upload <span style="color:red">*</span></label>
+      <input type="date" [(ngModel)]="uploadDate"
+        style="width: 250px; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); font-family: inherit;">
     </div>
 
     <div class="form-group">
       <div class="flex-between" style="align-items: flex-end; margin-bottom: 8px;">
         <label style="margin-bottom: 0;">Upload File Excel</label>
-        <button class="btn-text text-primary" style="font-size: 0.85rem; display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-download"></i> Download Format Template</button>
+        <button class="btn-text text-primary"
+          style="font-size: 0.85rem; display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-download"></i>
+          Download Format Template</button>
       </div>
       <div class="dropzone">
         <div class="drop-icon">
@@ -90,14 +102,14 @@
 
 <!-- HISTORY VIEW -->
 <div class="form-card" *ngIf="showHistory">
-   <div class="form-header flex-between">
+  <div class="form-header flex-between">
     <div>
-      <h2>History Upload Adjustment 2.0</h2>
+      <h2>History Upload Adjustment</h2>
       <p>Riwayat upload data adjustment sebelumnya.</p>
     </div>
     <button class="btn-close" (click)="closePanels()"><i class="fa-solid fa-times"></i></button>
   </div>
-  
+
   <div class="table-container mt-24">
     <table>
       <thead>

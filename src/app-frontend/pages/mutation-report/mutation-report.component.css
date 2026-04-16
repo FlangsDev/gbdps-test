@@ -56,6 +56,71 @@
   font-size: 0.85rem;
 }
 
+/* Date Action Buttons */
+.date-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-apply {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(2, 132, 199, 0.3);
+  font-family: inherit;
+}
+.btn-apply:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  box-shadow: 0 4px 8px rgba(2, 132, 199, 0.4);
+  transform: translateY(-1px);
+}
+.btn-apply:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(2, 132, 199, 0.3);
+}
+.btn-apply:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-apply i {
+  font-size: 0.8rem;
+}
+.btn-cancel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+.btn-cancel:hover {
+  background: #fef2f2;
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+.btn-cancel:active {
+  background: #fee2e2;
+}
+.btn-cancel i {
+  font-size: 0.8rem;
+}
+
 /* Search Box */
 .search-box {
   position: relative;

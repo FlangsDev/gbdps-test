@@ -3,9 +3,21 @@
     <div class="header-actions">
       <!-- Date Range (Optimized) -->
       <div class="date-range-wrapper">
-        <input type="date" class="date-input" title="Start Date">
+        <input type="date" class="date-input" [(ngModel)]="startDate" title="Start Date">
         <span class="separator">to</span>
-        <input type="date" class="date-input" title="End Date">
+        <input type="date" class="date-input" [(ngModel)]="endDate" title="End Date">
+      </div>
+
+      <!-- Date Action Buttons -->
+      <div class="date-action-buttons">
+        <button class="btn-apply" (click)="applyDateFilter()" [disabled]="!startDate || !endDate">
+          <i class="fa-solid fa-check"></i>
+          <span>Apply</span>
+        </button>
+        <button class="btn-cancel" (click)="cancelDateFilter()">
+          <i class="fa-solid fa-xmark"></i>
+          <span>Batal</span>
+        </button>
       </div>
 
       <!-- Search Box -->

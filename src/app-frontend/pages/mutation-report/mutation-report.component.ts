@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 interface MutationItem {
   no: number;
@@ -21,12 +22,14 @@ interface MutationItem {
 @Component({
   selector: 'app-mutation-report',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './mutation-report.component.html',
   styleUrls: ['./mutation-report.component.css']
 })
 export class MutationReportComponent {
   showDownloadMenu = false;
+  startDate: string = '';
+  endDate: string = '';
   
   items: MutationItem[] = [
     { no: 1, kodeBarang: 'QE54964', namaBarang: 'MAIN WHEEL ASSEMBLY', satuan: 'EA', jumlahBarang: 1, saldoAwal: 10, pemasukanBC23: 5, pemasukanBC27In: 0, pengeluaranBC30: 0, penyesuaian: 0, saldoAkhir: 15, hasilPencacahan: 15, jumlahSelisih: 0, keterangan: 'Sesuai' },
@@ -36,5 +39,19 @@ export class MutationReportComponent {
 
   toggleDownloadMenu() {
     this.showDownloadMenu = !this.showDownloadMenu;
+  }
+
+  applyDateFilter() {
+    if (this.startDate && this.endDate) {
+      console.log('Applying date filter:', this.startDate, 'to', this.endDate);
+      // TODO: Implement actual date filtering logic
+    }
+  }
+
+  cancelDateFilter() {
+    this.startDate = '';
+    this.endDate = '';
+    console.log('Date filter cancelled');
+    // TODO: Reset table data to default
   }
 }
