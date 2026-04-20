@@ -150,59 +150,19 @@
 
 /* ---- Responsive Login ---- */
 @media (max-width: 768px) {
-  .gmf-logo {
-    height: 80px;
-    margin-bottom: 20px;
-  }
-
-  .login-container {
-    max-width: 400px;
-    padding: 32px 28px;
-    margin: 0 16px;
-    border-radius: 16px;
-  }
-
-  .logo-container h1 {
-    font-size: 1.2rem;
-  }
-
-  .logo-container img {
-    height: 44px !important;
-  }
+  .gmf-logo { height: 72px; margin-bottom: 24px; }
+  .login-container { max-width: 400px; padding: 32px 28px; margin: 0 20px; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+  .logo-container h1 { font-size: 1.25rem; }
+  .logo-container img { height: 44px !important; }
+  .input-wrapper input { border-radius: 12px; padding: 12px 16px 12px 40px; font-size: 0.95rem; }
+  .btn-login { border-radius: 12px; padding: 14px; font-size: 1rem; }
 }
 
 @media (max-width: 480px) {
-  .gmf-logo {
-    height: 64px;
-    margin-bottom: 16px;
-  }
-
-  .login-container {
-    max-width: 100%;
-    padding: 28px 20px;
-    margin: 0 12px;
-    border-radius: 14px;
-  }
-
-  .logo-container h1 {
-    font-size: 1.1rem;
-  }
-
-  .logo-container i {
-    font-size: 2.2rem;
-  }
-
-  .input-group label {
-    font-size: 0.75rem;
-  }
-
-  .input-wrapper input {
-    padding: 10px 14px 10px 36px;
-    font-size: 0.9rem;
-  }
-
-  .btn-login {
-    padding: 12px;
-    font-size: 0.95rem;
-  }
+  .gmf-logo { height: 64px; margin-bottom: 16px; }
+  .login-container { max-width: 100%; padding: 28px 20px; margin: 0 16px; border-radius: 16px; }
+  .logo-container h1 { font-size: 1.15rem; }
+  .input-group label { font-size: 0.8rem; }
+  .input-wrapper input { padding: 12px 14px 12px 38px; font-size: 0.9rem; }
+  .btn-login { padding: 12px; font-size: 0.95rem; }
 }

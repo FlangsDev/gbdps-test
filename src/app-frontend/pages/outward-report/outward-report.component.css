@@ -316,52 +316,51 @@ td { text-align: center;
 
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
-    .report-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-    }
-
-    .actions {
-        width: 100%;
-        flex-wrap: wrap;
-    }
-
-    .search-box {
-        width: 100%;
-    }
+    .report-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .actions { width: 100%; flex-wrap: wrap; }
+    .search-box { width: 100%; }
 }
 
 @media (max-width: 768px) {
-    .actions {
-        flex-direction: column;
-        gap: 10px;
-    }
-
+    .report-header { gap: 12px; padding: 16px; }
+    .report-header h2 { font-size: 1.15rem; font-weight: 800; }
+    .actions { flex-direction: column; gap: 10px; }
     .search-box {
-        width: 100%;
+        width: 100%; border-radius: 14px; padding: 12px 16px;
+        border: 1.5px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
-
-    .pagination {
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
+    .search-box:focus-within {
+        border-color: var(--primary-color);
+        box-shadow: 0 4px 16px rgba(14,165,233,0.12);
     }
-
-    .filters {
-        width: 100%;
-        flex-wrap: wrap;
+    .btn-download {
+        border-radius: 12px; padding: 12px 16px;
+        font-size: 0.82rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
+    .filters { width: 100%; flex-wrap: wrap; gap: 8px; }
+    .custom-select-trigger {
+        border-radius: 14px; padding: 12px 16px;
+        border: 1.5px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .table-container {
+        border-radius: 14px; overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;
+    }
+    th {
+        font-size: 0.7rem; padding: 10px 8px; background: #f1f5f9;
+        text-transform: uppercase; letter-spacing: 0.04em; font-weight: 700; color: #64748b;
+    }
+    td { font-size: 0.8rem; padding: 10px 8px; border-bottom: 1px solid #f1f5f9; }
+    .pagination { flex-direction: column; gap: 12px; align-items: center; padding: 14px 16px; }
+    .p-btn { border-radius: 8px; }
 }
 
 @media (max-width: 480px) {
-    .btn-download {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .page-controls {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+    .report-header { padding: 12px; }
+    .report-header h2 { font-size: 1rem; }
+    .btn-download { width: 100%; justify-content: center; border-radius: 10px; }
+    .pagination { font-size: 0.78rem; padding: 12px; }
+    .page-controls { flex-wrap: wrap; justify-content: center; }
+    th { font-size: 0.62rem; padding: 8px 6px; }
+    td { font-size: 0.75rem; padding: 8px 6px; }
 }

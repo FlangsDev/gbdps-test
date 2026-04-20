@@ -330,77 +330,154 @@ import { CommonModule } from '@angular/common';
     }
 
     @media (max-width: 768px) {
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .dashboard-container {
+        gap: 14px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .stat-card {
+        border-radius: 16px;
+        padding: 16px 14px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        border: 1px solid #f1f5f9;
+      }
+
+      .stat-icon-wrap {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+      }
+
+      .stat-value {
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+
+      .stat-label {
+        font-size: 0.78rem;
+      }
+
       .welcome-banner {
         flex-direction: column;
         text-align: center;
         gap: 8px;
-        padding: 16px 20px;
+        padding: 20px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, #0ea5e9, #0369a1);
+        box-shadow: 0 6px 20px rgba(14, 165, 233, 0.3);
       }
+
       .banner-content {
         max-width: 100%;
       }
+
       .banner-content h2 {
         font-size: 1.15rem;
+        font-weight: 800;
       }
+
       .banner-content p {
         font-size: 0.8rem;
+        opacity: 0.9;
       }
+
       .banner-icon {
-        font-size: 2.5rem;
-        margin-right: 0;
         display: none;
       }
+
       .chart-content {
         flex-direction: column;
         align-items: center;
       }
+
       .charts-container {
         flex-direction: column;
+        gap: 14px;
       }
+
       .chart-card {
         max-width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        border: 1px solid #f1f5f9;
+      }
+
+      .chart-title {
+        font-size: 0.95rem;
+        font-weight: 700;
       }
     }
 
     @media (max-width: 480px) {
       .dashboard-container {
-        gap: 12px;
+        gap: 10px;
       }
-      .stats-grid { 
-        grid-template-columns: 1fr 1fr; 
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
         gap: 8px;
       }
+
       .stat-card {
         padding: 12px 10px;
+        border-radius: 14px;
       }
+
+      .stat-icon-wrap {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        font-size: 0.85rem;
+      }
+
       .stat-value {
         font-size: 1.3rem;
       }
+
       .stat-label {
-        font-size: 0.78rem;
+        font-size: 0.72rem;
       }
+
       .welcome-banner {
-        padding: 14px 16px;
-        border-radius: 12px;
+        padding: 16px;
+        border-radius: 14px;
       }
+
       .banner-content h2 {
         font-size: 1rem;
       }
+
+      .banner-content p {
+        font-size: 0.75rem;
+      }
+
+      .chart-card {
+        border-radius: 14px;
+        padding: 14px;
+      }
+
       .donut-chart {
         width: 100px;
         height: 100px;
       }
+
       .donut-center {
         width: 64px;
         height: 64px;
       }
+
       .donut-value {
         font-size: 1rem;
       }
+
       .legend-info {
         font-size: 0.78rem;
       }
+
       .legend-pct {
         font-size: 0.78rem;
       }

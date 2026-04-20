@@ -385,67 +385,65 @@ tr:hover {
     align-items: flex-start;
     gap: 16px;
   }
-
-  .actions {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .search-box {
-    width: 100%;
-  }
+  .actions { width: 100%; flex-wrap: wrap; }
+  .search-box { width: 100%; }
 }
 
 @media (max-width: 768px) {
-  .report-header {
-    gap: 12px;
-  }
-
-  .actions {
-    flex-direction: column;
-    gap: 10px;
-  }
-
+  .report-header { gap: 12px; padding: 16px; }
+  .report-header h2 { font-size: 1.15rem; font-weight: 800; }
+  .actions { flex-direction: column; gap: 10px; }
   .search-box {
     width: 100%;
+    border-radius: 14px;
+    padding: 12px 16px;
+    border: 1.5px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   }
-
+  .search-box:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 16px rgba(14,165,233,0.12);
+  }
+  .btn-download {
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 0.82rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .filters { width: 100%; flex-wrap: wrap; gap: 8px; }
+  .date-range { width: 100%; }
+  .custom-select-trigger {
+    border-radius: 14px;
+    padding: 12px 16px;
+    border: 1.5px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .table-container {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #e2e8f0;
+  }
+  th {
+    font-size: 0.7rem; padding: 10px 8px;
+    background: #f1f5f9; text-transform: uppercase;
+    letter-spacing: 0.04em; font-weight: 700; color: #64748b;
+  }
+  td { font-size: 0.8rem; padding: 10px 8px; border-bottom: 1px solid #f1f5f9; }
   .pagination {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
+    flex-direction: column; gap: 12px; align-items: center;
+    padding: 14px 16px;
   }
-
-  .filters {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .date-range {
-    width: 100%;
-  }
+  .p-btn { border-radius: 8px; }
 }
 
 @media (max-width: 480px) {
-  .report-header {
-    gap: 10px;
-  }
-
-  .actions {
-    gap: 8px;
-  }
-
-  .btn-download {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .pagination {
-    font-size: 0.78rem;
-  }
-
-  .page-controls {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  .report-header { padding: 12px; }
+  .report-header h2 { font-size: 1rem; }
+  .actions { gap: 8px; }
+  .btn-download { width: 100%; justify-content: center; border-radius: 10px; }
+  .pagination { font-size: 0.78rem; padding: 12px; }
+  .page-controls { flex-wrap: wrap; justify-content: center; }
+  th { font-size: 0.62rem; padding: 8px 6px; }
+  td { font-size: 0.75rem; padding: 8px 6px; }
 }

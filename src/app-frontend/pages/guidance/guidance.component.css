@@ -589,73 +589,31 @@
     max-width: 100%;
   }
   .download-item { flex-direction: column; text-align: center; }
-  .section-title {
-    padding: 14px 16px;
-  }
-  .section-body {
-    padding: 0 16px 16px;
-  }
-  .principle-grid {
-    grid-template-columns: 1fr;
-  }
-  .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .folder-grid {
-    grid-template-columns: 1fr;
-  }
-  .git-rules-grid {
-    grid-template-columns: 1fr;
-  }
-  .container-benefits {
-    grid-template-columns: 1fr;
-  }
-  .doc-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .section-title { padding: 14px 16px; }
+  .section-body { padding: 0 16px 16px; }
+  .principle-grid { grid-template-columns: 1fr; }
+  .tech-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .folder-grid { grid-template-columns: 1fr; }
+  .git-rules-grid { grid-template-columns: 1fr; }
+  .container-benefits { grid-template-columns: 1fr; }
+  .doc-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .guidance-header-banner { border-radius: 16px; }
+  .download-strip { border-radius: 14px; }
+  .sop-section { border-radius: 16px; }
+  .card-like { border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
 }
 
 @media (max-width: 480px) {
-  .guidance-header-banner {
-    padding: 16px;
-    border-radius: 12px;
-  }
-  .banner-left h2 {
-    font-size: 1.1rem;
-  }
-  .banner-left p {
-    font-size: 0.78rem;
-  }
-  .download-strip {
-    padding: 12px 14px;
-  }
-  .section-title {
-    padding: 12px;
-  }
-  .section-title-left {
-    gap: 10px;
-  }
-  .section-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 0.95rem;
-  }
-  .section-title h3 {
-    font-size: 0.9rem;
-  }
-  .section-body {
-    padding: 0 12px 12px;
-  }
-  .tech-grid {
-    grid-template-columns: 1fr;
-  }
-  .doc-grid {
-    grid-template-columns: 1fr;
-  }
-  .code-block pre {
-    font-size: 0.68rem;
-  }
-  .convention-table table {
-    font-size: 0.75rem;
-  }
+  .guidance-header-banner { padding: 16px; border-radius: 14px; }
+  .banner-left h2 { font-size: 1.1rem; }
+  .banner-left p { font-size: 0.78rem; }
+  .download-strip { padding: 12px 14px; }
+  .section-title { padding: 12px; }
+  .section-title-left { gap: 10px; }
+  .section-icon { width: 36px; height: 36px; font-size: 0.95rem; border-radius: 10px; }
+  .section-title h3 { font-size: 0.9rem; }
+  .section-body { padding: 0 12px 12px; }
+  .tech-grid, .doc-grid { grid-template-columns: 1fr; gap: 12px; }
+  .code-block pre { font-size: 0.68rem; border-radius: 12px; }
+  .convention-table table { font-size: 0.75rem; }
 }

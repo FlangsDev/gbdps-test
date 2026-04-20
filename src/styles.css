@@ -68,6 +68,8 @@ ul {
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Ensure images never overflow their containers */
@@ -76,18 +78,38 @@ img {
   height: auto;
 }
 
-/* Better touch targets on mobile */
+/* Better touch targets on mobile (Apple HIG: 44px minimum) */
 @media (max-width: 768px) {
   button, .btn-primary, .btn-secondary, .btn-submit, .btn-cancel {
-    min-height: 40px;
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
   }
 
   input, select, textarea {
     font-size: 16px; /* Prevents iOS zoom on focus */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Smoother interactions on touch devices */
+  a, button, .menu-link, .submenu li a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Better scrolling momentum */
+  .table-container {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
   }
 }
 
-/* Table responsive wrapper - ensure all tables can scroll horizontally */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Table responsive wrapper */
 .table-container {
   -webkit-overflow-scrolling: touch;
 }
