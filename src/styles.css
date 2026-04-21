@@ -96,16 +96,40 @@ img {
     touch-action: manipulation;
   }
 
-  /* Better scrolling momentum */
+  /* Better scrolling momentum + scroll hint */
   .table-container {
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
+    position: relative;
+  }
+
+  /* Column search inputs — bigger touch targets on mobile */
+  .col-search {
+    padding: 6px 8px;
+  }
+
+  .col-search input {
+    padding: 6px 8px;
+    min-height: 32px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+  }
+
+  /* Prevent body scroll when sidebar overlay is visible */
+  body.sidebar-open {
+    overflow: hidden;
   }
 }
 
 @media (max-width: 480px) {
   body {
     font-size: 14px;
+  }
+
+  .col-search input {
+    padding: 5px 6px;
+    min-height: 28px;
+    font-size: 0.75rem;
   }
 }
 
