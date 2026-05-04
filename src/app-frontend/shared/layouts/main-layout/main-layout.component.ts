@@ -44,7 +44,7 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
       label: 'GR & GI',
       icon: 'fa-solid fa-right-left',
       children: [
-        { label: 'Good Receipt (GR)', route: '/gr-gi/gr', icon: 'fa-solid fa-file-import' },
+        { label: 'Good Receive (GR)', route: '/gr-gi/gr', icon: 'fa-solid fa-file-import' },
         { label: 'Good Issue (GI)', route: '/gr-gi/gi', icon: 'fa-solid fa-file-export' }
       ]
     },
