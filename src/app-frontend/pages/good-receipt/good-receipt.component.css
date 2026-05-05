@@ -433,7 +433,7 @@ textarea:focus {
 
   .print-header-wrapper {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #00569d;
     padding-bottom: 5px;
@@ -450,8 +450,8 @@ textarea:focus {
   }
 
   .print-title {
-    text-align: center;
-    margin-bottom: 10px;
+    text-align: right;
+    margin-bottom: 0;
   }
 
   .print-title h1 {
@@ -464,10 +464,12 @@ textarea:focus {
   }
 
   .print-title h2 {
-    font-size: 12px;
-    font-weight: normal;
-    margin: 3px 0 0 0;
-    color: #475569;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 4px 0 0 0;
+    color: #00569d;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
   }
 
   .print-info-box {
