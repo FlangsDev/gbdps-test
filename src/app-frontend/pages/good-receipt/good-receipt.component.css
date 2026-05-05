@@ -395,6 +395,47 @@ textarea:focus {
   display: none;
 }
 
+/* Screen preview styles (shared with print) */
+.print-template .print-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  border-bottom: 2px solid #00569d;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+.print-template .print-logo {
+  display: flex;
+  align-items: center;
+}
+
+.print-template .print-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.print-template .print-title h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.print-template .print-title h2 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 4px 0 0 0;
+  color: #00569d;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 @media print {
   @page {
     size: A5 landscape;
@@ -433,8 +474,8 @@ textarea:focus {
 
   .print-header-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    position: relative;
     border-bottom: 2px solid #00569d;
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -450,7 +491,10 @@ textarea:focus {
   }
 
   .print-title {
-    text-align: right;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
     margin-bottom: 0;
   }
 
