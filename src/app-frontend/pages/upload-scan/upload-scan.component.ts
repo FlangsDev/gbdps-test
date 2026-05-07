@@ -17,7 +17,7 @@ export class UploadScanComponent {
   showBCMenu = false;
   showAJUMenu = false;
   
-  bcs = ['2.3', '2.5', '2.6', '2.7', '4.0'];
+  bcs = ['2.3', '2.7IN', '3.0'];
   ajus = ['AJU-001', 'AJU-002', 'AJU-003', 'AJU-004'];
 
   toggleBCMenu() { this.showBCMenu = !this.showBCMenu; this.showAJUMenu = false; }

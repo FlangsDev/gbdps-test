@@ -43,3 +43,5 @@ Thumbs.db
 
 # Custom user ignored files
 Technical Design Specification V2.pdf
+
+/src/app-backend

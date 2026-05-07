@@ -50,6 +50,7 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
     },
     { label: 'Upload Scan Dokumen', icon: 'fa-solid fa-file-arrow-up', route: '/upload/scan' },
     { label: 'Upload Data BC', icon: 'fa-solid fa-file-excel', route: '/upload/bc' },
+    { label: 'Users', icon: 'fa-solid fa-users', route: '/user' },
     { label: 'Histori', icon: 'fa-solid fa-clock-rotate-left', route: '/history' },
     { label: 'Feedback', icon: 'fa-regular fa-comment-dots', route: '/feedback' },
     { label: 'Guidance', icon: 'fa-solid fa-circle-question', route: '/guidance' }

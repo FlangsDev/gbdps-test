@@ -26,6 +26,7 @@ export const routes: Routes = [
       { path: 'history', loadComponent: () => import('./pages/history/history.component').then(m => m.HistoryComponent) },
       { path: 'feedback', loadComponent: () => import('./pages/feedback/feedback.component').then(m => m.FeedbackComponent) },
       { path: 'guidance', loadComponent: () => import('./pages/guidance/guidance.component').then(m => m.GuidanceComponent) },
+      { path: 'user', loadComponent: () => import('./pages/user/user.component').then(m => m.UserComponent) },
     ]
   },
   { path: '**', redirectTo: 'login' }
