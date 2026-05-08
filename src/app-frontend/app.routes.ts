@@ -11,7 +11,6 @@ export const routes: Routes = [
       { path: 'master-barang', loadComponent: () => import('./pages/master-barang/master-barang.component').then(m => m.MasterBarangComponent) },
       { path: 'recording/inward', loadComponent: () => import('./pages/inward-report/inward-report.component').then(m => m.InwardReportComponent) },
       { path: 'recording/outward', loadComponent: () => import('./pages/outward-report/outward-report.component').then(m => m.OutwardReportComponent) },
-      { path: 'recording/adjustment', loadComponent: () => import('./pages/adjustment/adjustment.component').then(m => m.AdjustmentComponent) },
       { path: 'recording/adjustment-v2', loadComponent: () => import('./pages/adjustment-v2/adjustment-v2.component').then(m => m.AdjustmentV2Component) },
       { path: 'recording/stock-opname', loadComponent: () => import('./pages/stock-opname/stock-opname.component').then(m => m.StockOpnameComponent) },
       { path: 'recording/saldo-awal', loadComponent: () => import('./pages/saldo-awal/saldo-awal.component').then(m => m.SaldoAwalComponent) },
