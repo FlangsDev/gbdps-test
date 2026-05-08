@@ -43,7 +43,7 @@
     </nav>
 
     <div class="sidebar-footer">
-      <button class="logout-btn">
+      <button class="logout-btn" (click)="logout()">
         <i class="fa-solid fa-arrow-right-from-bracket"></i>
         <span>Logout</span>
       </button>
@@ -106,7 +106,7 @@
               </div>
             </div>
             <ul>
-              <li class="logout-text"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</li>
+              <li class="logout-text" (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</li>
             </ul>
           </div>
         </div>
@@ -117,4 +117,19 @@
       <router-outlet></router-outlet>
     </section>
   </main>
+</div>
+
+<!-- Logout Confirmation Modal -->
+<div class="modal-overlay" *ngIf="showLogoutModal">
+  <div class="modal-content logout-modal">
+    <div class="modal-icon warning">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </div>
+    <h3 class="modal-title">Konfirmasi Keluar</h3>
+    <p class="modal-text">Apakah Anda yakin ingin keluar dari aplikasi GBDPS-APP?</p>
+    <div class="modal-actions">
+      <button class="btn btn-outline" (click)="cancelLogout()">Batal</button>
+      <button class="btn btn-danger" (click)="confirmLogout()">Ya, Keluar</button>
+    </div>
+  </div>
 </div>

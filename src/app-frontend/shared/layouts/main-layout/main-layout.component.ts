@@ -18,6 +18,7 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
   timerInterval: any;
   isProfileOpen = false;
   isGuidanceOpen = false;
+  showLogoutModal = false;
 
   menuItems: any[] = [
     { label: 'Beranda', icon: 'fa-solid fa-house', route: '/dashboard' },
@@ -133,8 +134,16 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
   }
 
   logout() {
-    if (confirm('Apakah Anda yakin ingin keluar?')) {
-      this.router.navigate(['/login']);
-    }
+    this.showLogoutModal = true;
+    this.isProfileOpen = false;
+  }
+
+  confirmLogout() {
+    this.showLogoutModal = false;
+    this.router.navigate(['/login']);
+  }
+
+  cancelLogout() {
+    this.showLogoutModal = false;
   }
 }
