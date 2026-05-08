@@ -131,4 +131,10 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
     this.isGuidanceOpen = !this.isGuidanceOpen;
     this.isProfileOpen = false;
   }
+
+  logout() {
+    if (confirm('Apakah Anda yakin ingin keluar?')) {
+      this.router.navigate(['/login']);
+    }
+  }
 }
