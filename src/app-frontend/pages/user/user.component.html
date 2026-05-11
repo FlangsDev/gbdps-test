@@ -62,28 +62,49 @@
 
   <!-- FORM VIEW -->
 <div class="form-card" *ngIf="isFormOpen">
-  <div class="form-header">
+  <div class="form-header" style="display: flex; justify-content: space-between; align-items: center;">
     <div>
-      <h2>{{ isEditing ? 'Edit Data User' : 'Tambah Data User' }}</h2>
-      <p>{{ isEditing ? 'Ubah informasi data master user' : 'Isi informasi data master user baru' }}</p>
+      <h2 style="font-size: 1.25rem; font-weight: 600; margin: 0; color: #212529;">{{ isEditing ? 'Update User' : 'Add User' }}</h2>
     </div>
+    <button class="btn-close-modal" (click)="closeForm()" style="background: none; border: none; font-size: 1.25rem; cursor: pointer; color: #6c757d;">&times;</button>
   </div>
 
   <div class="master-form">
     <div class="form-row">
       <div class="form-group flex-1">
-        <label>Username <span class="required">*</span></label>
-        <input type="text" placeholder="Contoh: john.doe" [(ngModel)]="formData.username">
+        <label style="font-weight: 700; color: #212529; margin-bottom: 4px;">Nama Pengguna</label>
+        <input type="text" placeholder="Admin PLB" [(ngModel)]="formData.namaPengguna" style="border-radius: 4px; padding: 8px 12px;">
       </div>
       <div class="form-group flex-1">
-        <label>Email <span class="required">*</span></label>
-        <input type="email" placeholder="Contoh: john.doe@company.com" [(ngModel)]="formData.email">
+        <label style="font-weight: 700; color: #212529; margin-bottom: 4px;">Alamat Email</label>
+        <input type="email" placeholder="admin@gmf-aeroasia.co.id" [(ngModel)]="formData.email" style="border-radius: 4px; padding: 8px 12px;">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group flex-1">
+        <label style="font-weight: 700; color: #212529; margin-bottom: 4px;">Username</label>
+        <input type="text" placeholder="adminPLB" [(ngModel)]="formData.username" style="border-radius: 4px; padding: 8px 12px;">
+      </div>
+      <div class="form-group flex-1">
+        <label style="font-weight: 700; color: #212529; margin-bottom: 4px;">Password</label>
+        <input type="password" placeholder="" [(ngModel)]="formData.password" style="border-radius: 4px; padding: 8px 12px;">
       </div>
     </div>
 
     <div class="form-group">
-      <label>Role <span class="required">*</span></label>
-      <input type="text" placeholder="Contoh: Administrator, Supervisor, Staff" [(ngModel)]="formData.role">
+      <label style="font-weight: 700; color: #212529; margin-bottom: 4px;">Role Pengguna</label>
+      <select [(ngModel)]="formData.role" style="width: 100%; padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.95rem; background-color: #fff; font-family: inherit; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23343a40%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 12px center; background-size: 10px auto;">
+        <option value="Admin">Admin</option>
+        <option value="Administrator">Administrator</option>
+        <option value="Supervisor">Supervisor</option>
+        <option value="Staff">Staff</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label style="font-weight: 700; color: #212529; margin-bottom: 4px;">Keterangan</label>
+      <textarea placeholder="Masukan Keterangan Pengguna (Optional)" [(ngModel)]="formData.keterangan" rows="3" style="width: 100%; padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.95rem; font-family: inherit; resize: vertical;"></textarea>
     </div>
   </div>
 

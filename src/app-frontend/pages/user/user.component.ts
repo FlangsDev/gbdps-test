@@ -24,9 +24,12 @@ export class UserComponent {
     editingIndex = -1;
 
     formData = {
+    namaPengguna: '',
+    email: '',
     username: '',
-    role: '',
-    email: ''
+    password: '',
+    role: 'Admin',
+    keterangan: ''
   };
 
   openEditForm(index: number) {
@@ -34,9 +37,12 @@ export class UserComponent {
     this.isEditing = true;
     this.editingIndex = realIndex;
     this.formData = { 
+      namaPengguna: this.masterData[realIndex].namaPengguna || '',
+      email: this.masterData[realIndex].email,
       username: this.masterData[realIndex].username,
+      password: '', // do not populate password on edit by default
       role: this.masterData[realIndex].role,
-      email: this.masterData[realIndex].email
+      keterangan: this.masterData[realIndex].keterangan || ''
     };
     this.isFormOpen = true;
   }
@@ -44,19 +50,19 @@ export class UserComponent {
   openAddForm() {
     this.isEditing = false;
     this.editingIndex = -1;
-    this.formData = { username: '', role: '', email: '' };
+    this.formData = { namaPengguna: '', email: '', username: '', password: '', role: 'Admin', keterangan: '' };
     this.isFormOpen = true;
   }
 
-    masterData = [
-    { username: 'admin01', role: 'Administrator', email: 'admin01@company.com', dateCreated: '2025-05-01' },
-    { username: 'budi.saputra', role: 'Supervisor', email: 'budi.saputra@company.com', dateCreated: '2025-05-03' },
-    { username: 'siti.rahma', role: 'Staff', email: 'siti.rahma@company.com', dateCreated: '2025-05-05' },
-    { username: 'andika.it', role: 'IT Support', email: 'andika.it@company.com', dateCreated: '2025-05-06' },
-    { username: 'rina.finance', role: 'Finance', email: 'rina.finance@company.com', dateCreated: '2025-05-08' },
-    { username: 'dimas.warehouse', role: 'Warehouse', email: 'dimas.warehouse@company.com', dateCreated: '2025-05-10' },
-    { username: 'farhan.qc', role: 'Quality Control', email: 'farhan.qc@company.com', dateCreated: '2025-05-12' },
-    { username: 'nabila.proc', role: 'Procurement', email: 'nabila.proc@company.com', dateCreated: '2025-05-14' },
+    masterData: any[] = [
+    { namaPengguna: 'Admin Satu', username: 'admin01', role: 'Administrator', email: 'admin01@company.com', dateCreated: '2025-05-01', keterangan: '' },
+    { namaPengguna: 'Budi Saputra', username: 'budi.saputra', role: 'Supervisor', email: 'budi.saputra@company.com', dateCreated: '2025-05-03', keterangan: '' },
+    { namaPengguna: 'Siti Rahma', username: 'siti.rahma', role: 'Staff', email: 'siti.rahma@company.com', dateCreated: '2025-05-05', keterangan: '' },
+    { namaPengguna: 'Andika IT', username: 'andika.it', role: 'IT Support', email: 'andika.it@company.com', dateCreated: '2025-05-06', keterangan: '' },
+    { namaPengguna: 'Rina Finance', username: 'rina.finance', role: 'Finance', email: 'rina.finance@company.com', dateCreated: '2025-05-08', keterangan: '' },
+    { namaPengguna: 'Dimas Warehouse', username: 'dimas.warehouse', role: 'Warehouse', email: 'dimas.warehouse@company.com', dateCreated: '2025-05-10', keterangan: '' },
+    { namaPengguna: 'Farhan QC', username: 'farhan.qc', role: 'Quality Control', email: 'farhan.qc@company.com', dateCreated: '2025-05-12', keterangan: '' },
+    { namaPengguna: 'Nabila Proc', username: 'nabila.proc', role: 'Procurement', email: 'nabila.proc@company.com', dateCreated: '2025-05-14', keterangan: '' },
     ];
 
     get filteredData() {
@@ -65,6 +71,7 @@ export class UserComponent {
         !this.searchKeyword ||
         item.username.toLowerCase().includes(this.searchKeyword.toLowerCase()) ||
         item.email.toLowerCase().includes(this.searchKeyword.toLowerCase()) ||
+        (item.namaPengguna && item.namaPengguna.toLowerCase().includes(this.searchKeyword.toLowerCase())) ||
         item.role.toLowerCase().includes(this.searchKeyword.toLowerCase());
 
         return matchSearch;
@@ -90,9 +97,12 @@ export class UserComponent {
     }
 
     const record = {
-      username: this.formData.username,
-      role: this.formData.role,
+      namaPengguna: this.formData.namaPengguna,
       email: this.formData.email,
+      username: this.formData.username,
+      password: this.formData.password,
+      role: this.formData.role,
+      keterangan: this.formData.keterangan,
       dateCreated: ''
     };
 
